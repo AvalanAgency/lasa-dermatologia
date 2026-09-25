@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://avalanagency.github.io',
-  base: '/lasa-dermatologia',
+  base: '/lasa-dermatologia/',
 });

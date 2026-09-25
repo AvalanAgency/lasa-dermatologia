@@ -1,14 +1,14 @@
 ---
 const treatments = [
-  { seal: 'Bo', name: 'Botox', copy: 'Suaviza líneas de expresión sin perder movimiento natural en el rostro.' },
-  { seal: 'Ri', name: 'Rinomodelación', copy: 'Armonizá el perfil nasal con ácido hialurónico, sin pasar por quirófano.' },
-  { seal: 'La', name: 'Labios', copy: 'Volumen e hidratación con técnica sutil, respetando la proporción del rostro.' },
-  { seal: 'Ul', name: 'Ultherapy Prime', copy: 'Efecto lifting con ultrasonido focalizado. Nuestra última incorporación.' },
-  { seal: 'Me', name: 'Mesoestetic', copy: 'Protocolos médicos de luminosidad, firmeza y renovación de la piel.' },
-  { seal: 'Bi', name: 'Bioestimuladores', copy: 'Estimulan tu propio colágeno para un efecto progresivo y natural.' },
-  { seal: 'Ra', name: 'Radiesse', copy: 'Bioestimulación y volumen facial en una sola sesión.' },
-  { seal: 'Lá', name: 'Láseres', copy: 'Manchas, vasitos y rejuvenecimiento con tecnología Alma Laser.' },
-  { seal: 'De', name: 'Depilación definitiva', copy: 'Resultados duraderos, piel lista para todo el año.' },
+  { name: 'Botox', tag: 'Toxina', copy: 'Suaviza líneas de expresión sin perder movimiento natural en el rostro.' },
+  { name: 'Rinomodelación', tag: 'Ácido hialurónico', copy: 'Armonizá el perfil nasal sin pasar por quirófano.' },
+  { name: 'Labios', tag: 'Ácido hialurónico', copy: 'Volumen e hidratación con técnica sutil, respetando la proporción del rostro.' },
+  { name: 'Ultherapy Prime', tag: 'Novedad', copy: 'Efecto lifting con ultrasonido focalizado. Nuestra última incorporación.' },
+  { name: 'Mesoestetic', tag: 'Protocolo médico', copy: 'Luminosidad, firmeza y renovación de la piel.' },
+  { name: 'Bioestimuladores', tag: 'Colágeno', copy: 'Estimulan tu propio colágeno para un efecto progresivo y natural.' },
+  { name: 'Radiesse', tag: 'Bioestimulación', copy: 'Bioestimulación y volumen facial en una sola sesión.' },
+  { name: 'Láseres', tag: 'Alma Laser', copy: 'Manchas, vasitos y rejuvenecimiento con tecnología de punta.' },
+  { name: 'Depilación definitiva', tag: 'Láser', copy: 'Resultados duraderos, piel lista para todo el año.' },
 ];
 ---
 
@@ -21,16 +21,28 @@ const treatments = [
         solo tu mejor versión, con seguimiento profesional.
       </p>
     </div>
-    <div class="tgrid" data-reveal>
-      {
-        treatments.map((t) => (
-          <div class="tcard">
-            <div class="seal">{t.seal}</div>
-            <h3>{t.name}</h3>
-            <p>{t.copy}</p>
-          </div>
-        ))
-      }
+    <div class="menu-wrap" data-reveal>
+      <div class="menu-image">
+        <img
+          src={`${import.meta.env.BASE_URL}images/cream-apply.jpg`}
+          alt="Aplicación de tratamiento dermatológico en piel"
+          width="1200"
+          height="1800"
+        />
+      </div>
+      <div class="menu-list">
+        {
+          treatments.map((t) => (
+            <div class="menu-row">
+              <div class="row-name">
+                <h3 class="serif">{t.name}</h3>
+              </div>
+              <p>{t.copy}</p>
+              <span class="tag">{t.tag}</span>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>

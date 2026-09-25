@@ -23,4 +23,14 @@ src/
 
 ## Deploy
 
-El sitio es 100% estático (`output: "static"`), así que se puede deployar directo en Vercel, Netlify, Cloudflare Pages o GitHub Pages sin configuración adicional — solo conectar el repo y usar `npm run build` como build command y `dist/` como output.
+El sitio es 100% estático (`output: "static"`) y se publica solo vía GitHub Actions a GitHub Pages en cada push a `main` (ver `.github/workflows/deploy.yml`). También se puede deployar directo en Vercel, Netlify o Cloudflare Pages sin configuración adicional.
+
+## Fotos
+
+Las imágenes en `public/images/` son fotos de stock con licencia libre (Unsplash License, uso comercial permitido sin atribución) usadas como placeholder de muestra — para el sitio final del cliente hay que reemplazarlas por fotos reales del consultorio, del equipo y de pacientes con su consentimiento:
+
+- `hero-portrait.jpg` — [unsplash.com/photos/1763539818420-165e69b7489b](https://unsplash.com/photos/1763539818420-165e69b7489b)
+- `spa-treatment.jpg` — [unsplash.com/photos/1761718209708-9ab9ba1c7252](https://unsplash.com/photos/1761718209708-9ab9ba1c7252)
+- `clinic-interior.jpg` — [unsplash.com/photos/1781513144825-aa1e284c5950](https://unsplash.com/photos/1781513144825-aa1e284c5950)
+- `serum-hands.jpg` — [unsplash.com/photos/1552256031-811fa8f0a7b1](https://unsplash.com/photos/1552256031-811fa8f0a7b1)
+- `cream-apply.jpg` — [unsplash.com/photos/1693004927824-f2623bbedc8b](https://unsplash.com/photos/1693004927824-f2623bbedc8b)
