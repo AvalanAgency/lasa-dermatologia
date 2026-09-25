@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Lasa Dermatología — Medicina estética en San Isidro',
+  description = 'Botox, rellenos, láser, Ultherapy Prime y bioestimuladores. Dermatología avanzada en San Isidro, con criterio médico y resultados naturales.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <script>
+      const els = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach((e) => e.classList.add('in-view'));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        els.forEach((e) => io.observe(e));
+      }
+    </script>
+  </body>
+</html>

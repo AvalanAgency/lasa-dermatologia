@@ -1,0 +1,36 @@
+---
+const treatments = [
+  { seal: 'Bo', name: 'Botox', copy: 'Suaviza líneas de expresión sin perder movimiento natural en el rostro.' },
+  { seal: 'Ri', name: 'Rinomodelación', copy: 'Armonizá el perfil nasal con ácido hialurónico, sin pasar por quirófano.' },
+  { seal: 'La', name: 'Labios', copy: 'Volumen e hidratación con técnica sutil, respetando la proporción del rostro.' },
+  { seal: 'Ul', name: 'Ultherapy Prime', copy: 'Efecto lifting con ultrasonido focalizado. Nuestra última incorporación.' },
+  { seal: 'Me', name: 'Mesoestetic', copy: 'Protocolos médicos de luminosidad, firmeza y renovación de la piel.' },
+  { seal: 'Bi', name: 'Bioestimuladores', copy: 'Estimulan tu propio colágeno para un efecto progresivo y natural.' },
+  { seal: 'Ra', name: 'Radiesse', copy: 'Bioestimulación y volumen facial en una sola sesión.' },
+  { seal: 'Lá', name: 'Láseres', copy: 'Manchas, vasitos y rejuvenecimiento con tecnología Alma Laser.' },
+  { seal: 'De', name: 'Depilación definitiva', copy: 'Resultados duraderos, piel lista para todo el año.' },
+];
+---
+
+<section id="tratamientos">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Un menú de tratamientos pensado por dermatólogos</h2>
+      <p class="tag">
+        Cada procedimiento combina técnica médica y criterio estético. Sin resultados exagerados:
+        solo tu mejor versión, con seguimiento profesional.
+      </p>
+    </div>
+    <div class="tgrid" data-reveal>
+      {
+        treatments.map((t) => (
+          <div class="tcard">
+            <div class="seal">{t.seal}</div>
+            <h3>{t.name}</h3>
+            <p>{t.copy}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+const items = [
+  {
+    num: 'CRITERIO MÉDICO',
+    title: 'Diagnóstico antes que tratamiento',
+    copy: 'Cada plan parte de una evaluación dermatológica real, no de un catálogo de procedimientos.',
+  },
+  {
+    num: 'TECNOLOGÍA',
+    title: 'Equipamiento de última generación',
+    copy: 'Ultherapy Prime, láser Alma y protocolos Mesoestetic, actualizados constantemente.',
+  },
+  {
+    num: 'SEGUIMIENTO',
+    title: 'Acompañamiento personalizado',
+    copy: 'El vínculo con el paciente continúa después de la sesión, con controles y ajustes.',
+  },
+];
+---
+
+<section>
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Por qué elegir Lasa</h2>
+    </div>
+    <div class="approach-grid" data-reveal>
+      {
+        items.map((i) => (
+          <div class="approach-item">
+            <p class="num">{i.num}</p>
+            <h3 class="serif">{i.title}</h3>
+            <p>{i.copy}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
